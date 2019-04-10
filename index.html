@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Phottomap</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<script type="text/javascript" src="main.js" defer></script>
+	<script type="text/javascript" src="jquery-3.3.1.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >
+		    (function (d, w, c) {
+		        (w[c] = w[c] || []).push(function() {
+		            try {
+		                w.yaCounter51436042 = new Ya.Metrika2({
+		                    id:51436042,
+		                    clickmap:true,
+		                    trackLinks:true,
+		                    accurateTrackBounce:true,
+		                    webvisor:true,
+		                    ecommerce:"emailsData"
+		                });
+		            } catch(e) { }
+		        });
+
+		        var n = d.getElementsByTagName("script")[0],
+		            s = d.createElement("script"),
+		            f = function () { n.parentNode.insertBefore(s, n); };
+		        s.type = "text/javascript";
+		        s.async = true;
+		        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+		        if (w.opera == "[object Opera]") {
+		            d.addEventListener("DOMContentLoaded", f, false);
+		        } else { f(); }
+		    })(document, window, "yandex_metrika_callbacks2");
+		</script>
+		<noscript>
+			<div>
+				<img src="https://mc.yandex.ru/watch/51436042" style="position:absolute; left:-9999px;" alt="" />
+			</div>
+		</noscript>
+		<!-- /Yandex.Metrika counter -->
+	</header>
+	<main>
+		<section class="section-top">
+			<img class="mobile-background" src="images/web_map.jpg" alt="">
+			<div id="open-modal" class="modal-dialog">
+				<div id="modal-window" class="modal-window">
+					<a href="#close" title="закрыть" id="closeBtn" class="close">Закрыть</a>
+					<div class="modal-container">
+						<p class="modal-p" id="modal-p-logo">
+							<img src="images/logo.png" alt="phottomap">
+						</p>
+						<h2 id="modal-h">
+							<span>Присоединяйся!</span><br>
+							Приложение находится в разработке и скоро будет доступно.<br>
+							Оставь свой email и мы сообщим тебе, когда приложение будет готово.
+						</h2>
+						<p></p>
+						<form id="form">
+							<p id="modal-p" class="modal-p">
+								<input id="inputEmail" name="email" type="email" placeholder="Введите email"><br>
+								<div id="sendBtn">
+									Отправить
+								</div>
+								<div id="hideBtn">
+									Продолжить
+								</div>
+							</p>
+						</form>
+					</div>
+				</div>	
+			</div>
+			<div class="main-container">
+				<div class="info">
+					<p class="appname">
+					<img src="images/logo.png" alt="phottomap">phottomap
+					</p>
+					<div class="p-background">
+						<h2>Как найти место для фото?</h2>
+						<p class="text">В приложении phottomap.<br> 					Самые красивые места для фото в твоем городе!
+						</p>
+					</div>
+					<div class="btnBuy" id="btnBuy">
+						<img id="appStoreTop" src="images/app_store_button.png" alt="">
+						<img id="googlePlayTop" src="images/google_play_button.png" alt="">
+					</div>
+				</div>
+				<div class="map">
+					<img src="images/web_map.jpg" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section class="places-around">
+			<div class="places-around-container">
+				<div class="info">
+					<h2>Места для фотографий вокруг тебя</h2>
+					<p class="text">Выбирай самые кайфовые места и делай самые крутые фотографии
+					</p>
+				</div>
+				<img class="phone" src="images/phone1.png" alt="">
+			</div>
+		</section>
+
+		<section class="searching-places">
+			<div class="searching-container">
+				<img class="phone" src="images/phone2.png" alt="">
+				<div class="info-right">
+					<h2>Поиск мест для фотографий</h2>
+					<p class="text">+ Просматривай подборки самых популярных и новых мест<br>
+									+ Ищи места по цвету и выбирай те, которые подходят тебе по стилю
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="find-places">
+			<div class="find-places-container">
+				<div class="info">
+					<h2>Помогай людям искать красивые места</h2>
+					<p class="text">Загружай свои фотографии и отмечай места съемки на карте.<br>
+									Вместе мы поможем людям находить крутые места для фотосессий.
+					</p>
+				</div>
+				<img class="phone" src="images/phone3.png" alt="">
+			</div>
+		</section>
+
+		<section class="buy">
+			<div class="buy-container">
+				<p>
+					<img src="images/logo.png" alt="phottomap">
+				</p>
+				<h2>
+					phottomap
+				</h2>
+				<p class="text">
+					Скачать бесплатно:
+				</p>
+				<div class="btnBuy" id="btnBuyBottom">
+					<img id="appStoreBottom" src="images/app_store_button.png" alt="">
+					<img id="googlePlayBottom" src="images/google_play_button.png" alt="">
+				</div>
+				</p>
+			</div>
+				
+		</section>
+
+	</main>
+	<footer>
+		<!-- место для футера -->
+	</footer>
+</body>
+</html>

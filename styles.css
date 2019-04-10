@@ -1,0 +1,601 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+h2{
+	font-size: 36px;
+	font-weight: 400;
+}
+
+p{
+	font-size: 24px;
+}
+
+input, textarea{
+   max-width:100%;
+}
+
+.mobile-background{
+	display: none;
+}
+
+.main-container{
+	margin: calc((120vh - 750px) / 2) auto;
+	margin-bottom: 120px;
+	display: flex;
+	justify-content: center;
+	width: 85%;
+}
+
+.appname{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 50px;
+	padding-left: 30%;
+}
+
+.appname img{
+	width: 45px;
+	height: 45px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.text{
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+#btnBuy{
+	margin-top: 50px;
+}
+
+.btnBuy{
+	display: flex;
+	justify-content: flex-start;
+	margin: 20px auto;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.btnBuy img{
+	width: 180px !important;
+	height: 56px !important;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btnBuy img:first-child{
+	margin-right: 40px;
+}
+
+#btnBuyBottom{
+	justify-content: center;
+	text-align: center;
+	text-align: -webkit-center;
+}
+
+
+.info{
+	padding-top: 80px;
+	padding-right: 30px;
+	width: 650px;
+}
+
+.map{
+	display: inline-block;
+	width: 340px;
+	height: 600px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+/* модальное окно с формой обратной связи========================== */
+
+.modal-dialog{
+	display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99999;
+    pointer-events: none;
+}
+
+.modal-dialog:target{
+	display: block;
+	pointer-events: auto;
+}
+
+.modal-window{
+    position: relative;
+    margin: 5% auto;
+    padding: 20px 20px 100px 20px;
+    background: #fff;
+    width: 70%;
+    height: calc((150vh - 250px) / 2);
+    text-align: right;
+}
+
+.modal-window a{
+	color: #bcbcbc;
+	text-decoration: none;
+}
+
+.modal-container{
+    margin: 0 auto;
+    padding: 0px;
+    width: 75%;
+}
+
+.modal-p{
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.modal-p img{
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+}
+
+#modal-p-logo{
+	text-align: center;
+	margin-bottom: calc((40vh - 250px) / 2);
+}
+
+.modal-container h2{
+	font-size: 26px;
+	margin-bottom: 4vh;
+	text-align: left;
+}
+
+#modal-h span{
+	font-size: 40px;
+	line-height: 2;
+}
+
+.modal-container p{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#inputEmail{
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	font-size: 22px;
+	border-radius: 25px;
+	outline: none;
+	border: 1px solid #d9d9d9;
+	padding: 15px;
+}
+
+#sendBtn{
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	border: 1px solid #2c8573;
+	border-radius: 25px;
+	background: #699a5c;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 2;
+	-webkit-tap-highlight-color: transparent;
+}
+
+#hideBtn{
+	display: none;
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	border: 1px solid #2c8573;
+	border-radius: 25px;
+	background: #699a5c;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 2;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/*========================================================<<<< */
+/*Fade IN */
+.fade{
+	-webkit-animation-name:fade;
+	-webkit-animation-duration: 0.3s;
+	animation-name: fade;
+	animation-duration: 0.3s;
+}
+
+@-webkit-keyframes fade{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+
+@keyframes fade{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+/* =============================================================================== */
+
+.places-around{
+	background: #2b333e;
+	padding-top: 100px;
+}
+
+.places-around-container{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 85%;
+	color: #fff;
+}
+
+.phone{
+	width: 340px;
+	height: 600px;
+}
+
+/* =============================================================================== */
+
+.searching-places{
+	padding-top: 100px;
+}
+
+.searching-container{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 85%;
+}
+
+.info-right{
+	padding-top: 80px;
+	padding-left: 100px;
+	width: 650px;
+}
+
+/* =============================================================================== */
+
+.find-places{
+	background: #2b333e;
+	padding-top: 100px;
+}
+
+.find-places-container{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 85%;
+	color: #fff;
+}
+
+/* =============================================================================== */
+
+.buy{
+	padding-top: calc((100vh - 600px) / 2);
+	padding-bottom: 200px;
+}
+
+.buy-container{
+	margin: 80px auto;
+	width: 50%;
+}
+
+.buy-container img{
+	width: 80px;
+	height: 80px;
+}
+
+.buy-container h2{
+	text-align: center;
+	font-weight: bold;
+}
+
+.buy-container p{
+	text-align: center;
+	font-size: 24px;
+}
+
+/* медиазапросы для мобилок =============================================================================== */
+
+@media screen and (max-width: 770px){
+
+	#btnBuy{
+		margin-top: 20px;
+	}
+
+	.btnBuy{
+		width: 100%;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.btnBuy img:first-child{
+		margin-right: 0px;
+	}
+
+	.btnBuy img{
+		margin-top: 20px;
+	}
+
+	#btnBuyBottom{
+		justify-content: center;
+		text-align: center;
+		text-align: -webkit-center;
+	}
+
+}
+
+@media screen and (max-width: 500px){
+
+	.main-container{
+		display: inline;
+		margin: 10px auto;
+		width: 85%;
+	}
+
+	.map{
+		display: none;
+	}
+
+	.section-top{
+		height: 568px;
+		text-align: center;
+		/* background-image: url(images/web_map.jpg); */
+		position: relative;
+		overflow: hidden;
+	}
+
+	.mobile-background{
+		display: block;
+		position: absolute;
+		left: 0;
+		z-index: -1000;
+
+		animation: map-animation 45s infinite alternate linear;
+		-webkit-animation: map-animation 45s infinite alternate linear;
+	}
+
+	.info{
+		margin: 0 auto;
+		padding-top: 10px;
+		padding-right: 0px;
+		width: 100%;
+	}
+
+	.appname{
+		font-size: 24px;
+		text-align: left;
+		margin-bottom: 30px;
+		padding-left: 15px;
+	}
+
+	.appname img{
+		width: 50px;
+		height: 50px;
+		margin-right: 20px;
+	}
+
+	h2{
+		font-size: 38px;
+		text-align: left;
+	}
+
+	.text{
+		margin-top: 30px;
+		margin-bottom: 0px;
+		font-size: 26px;
+		text-align: left;
+	}
+
+	.p-background{
+		padding-top: 10px;
+		padding-right: 30px;
+		padding-left: 30px;
+		padding-bottom: 30px;
+		margin-bottom: 0px;
+		background: rgba(255, 255, 255, 0);
+	}
+
+	#btnBuy{
+		margin-top: 40px;
+	}
+
+	.btnBuy{
+		width: 80%;
+		margin-top: 20px;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.btnBuy img:first-child{
+		margin-right: 13px;
+	}
+
+	#btnBuyBottom{
+		width: 100%;
+	}
+
+	.btnBuy img{
+		width: 140px !important;
+		height: 44px !important;
+		margin-top: 0px;
+	}
+
+	.modal-window{
+	    width: 75%;
+	    height: calc((190vh - 250px) / 2);
+	    text-align: right;
+	    padding-bottom: 50px;
+	}
+
+	.modal-container{
+	    width: 85%;
+	}
+
+	.modal-container p{
+		text-align: left;
+		margin-bottom: 25px;
+	}
+
+	.modal-p{
+		text-align: center;
+		padding-bottom: 0px;
+	}
+
+	#modal-p-logo{
+		text-align: center;
+		margin-bottom: calc((50vh - 250px) / 2);
+	}
+
+	.modal-p img{
+		width: 70px;
+		height: 70px;
+		border-radius: 35px;
+	}
+
+	.modal-container h2{
+		text-align: left;
+		margin-bottom: 15px;
+		font-size: 16px;
+	}
+
+	#modal-h span{
+		font-size: 30px;
+	}
+
+	#inputEmail{
+		font-size: 20px;
+		margin-bottom: 0px;
+	}
+
+/* =============================================>>> */
+
+	.places-around{
+		padding-top: 50px;
+	}
+
+	.places-around-container{
+		justify-content: none;
+		flex-direction: column;
+	}
+
+	.phone{
+		margin-top: 40px;
+		height: auto;
+		width: 100%;
+	}
+/* =============================================>>> */
+
+	.searching-places{
+		padding-top: 50px;
+	}
+
+	.searching-container{
+		justify-content: none;
+		flex-direction: column-reverse;
+	}
+
+	.info-right{
+		margin: 0 auto;
+		padding-top: 0px;
+		padding-right: 0px;
+		padding-left: 0px;
+		width: 100%;
+	}
+
+/* =============================================>>> */
+
+	.find-places{
+		padding-top: 50px;
+	}
+
+	.find-places-container{
+		justify-content: none;
+		flex-direction: column;
+	}
+
+/* =============================================>>> */
+
+	.buy{
+		padding-top: 80px;
+		padding-bottom: 100px;
+	}
+
+	.buy-container{
+		width: 80%;
+	}
+
+	.buy-container h2{
+		font-size: 24px;
+	}
+
+	.buy-container .text{
+		margin-bottom: 40px;
+	}
+
+	.buy-container img{
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media screen and (max-width: 350px){
+
+	#btnBuy{
+		margin-top: 10px;
+	}
+
+	.btnBuy img{
+		width: 120px !important;
+		height: 38px !important;
+	}
+
+	.modal-container h2{
+		font-size: 15px;
+	}
+
+	#modal-h span{
+		font-size: 24px;
+	}
+
+}
+
+/* анимация карты =============================================================================== */
+
+@keyframes map-animation{
+	0% {
+		transform: translate(0px, 0px);
+	}
+	100%{
+		transform: translate(-745px, -100px);
+	}
+}
+
+@-webkit-keyframes map-animation{
+	0% {
+		transform: translate(0px, 0px);
+	}
+	100%{
+		transform: translate(-745px, -100px);
+	}
+}
+
+.map img{
+	animation: map-animation 45s infinite alternate linear;
+	-webkit-animation: map-animation 45s infinite alternate linear;
+
+	position: relative;
+}
